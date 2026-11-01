@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>🏥 MediCare</h2>
+            <p class="subtitle">Hospital Management</p>
+
+            <nav>
+                <button class="nav-btn active" data-page="dashboard">📊 Dashboard</button>
+                <button class="nav-btn" data-page="patients">🧑 Patients</button>
+                <button class="nav-btn" data-page="doctors">👨‍⚕️ Doctors</button>
+                <button class="nav-btn" data-page="appointments">📅 Appointments</button>
+                <button class="nav-btn" data-page="departments">🏢 Departments</button>
+                <button class="nav-btn" data-page="medicalRecords">📋 Medical Records</button>
+                <button class="nav-btn" data-page="prescriptions">💊 Prescriptions</button>
+                <button class="nav-btn" data-page="billing">💳 Billing</button>
+                <button class="nav-btn" data-page="hospitals">🏥 Hospitals</button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1 id="pageTitle">Dashboard</h1>
+                    <p>Welcome to the Hospital Management System</p>
+                </div>
+                <div class="admin">👤 Administrator</div>
+            </header>
+
+            <!-- Dashboard -->
+            <section id="dashboard" class="page active-page">
+                <h2>Dashboard Overview</h2>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>Total Patients</h3>
+                        <p id="patientCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Total Doctors</h3>
+                        <p id="doctorCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Appointments</h3>
+                        <p id="appointmentCount">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Total Bills</h3>
+                        <p id="billingCount">0</p>
+                    </div>
+                </div>
+
+                <div class="welcome-box">
+                    <h2>Welcome to MediCare 🏥</h2>
+                    <p>
+                        Manage patients, doctors, appointments, medical records,
+                        prescriptions, billing, departments, and hospitals from
+                        one place.
+                    </p>
+                </div>
+
+                <div class="panel">
+                    <h2>Recent Patients</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Patient ID</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Contact</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentPatients"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic Management Pages -->
+            <section id="managementPage" class="page">
+                <div class="panel">
+                    <h2 id="sectionHeading">Manage Records</h2>
+
+                    <form id="recordForm">
+                        <div id="formFields" class="form-grid"></div>
+                        <button type="submit" class="add-btn">+ Add Record</button>
+                    </form>
+                </div>
+
+                <div class="panel">
+                    <h2 id="tableHeading">All Records</h2>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search records..."
+                    >
+
+                    <div class="table-container">
+                        <table>
+                            <thead id="tableHead"></thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
